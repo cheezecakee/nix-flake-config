@@ -92,8 +92,6 @@ My personal [NixOS](https://nixos.org/) flake-based configuration, designed for 
 
 ### 🐘 PostgreSQL
 - Service enabled with:
-  - Database: `fitrkr`
-  - User: `cheezecake`
   - Trust auth for local connections
 
 ### 🔐 SSH
