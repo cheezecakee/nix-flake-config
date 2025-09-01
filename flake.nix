@@ -7,12 +7,11 @@
     lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }: {
+  outputs = { self, nixpkgs, flake-utils, lanzaboote, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./hosts/default.nix
-        inputs.lanzaboote.nixosModules.default
       ];
     };
   };

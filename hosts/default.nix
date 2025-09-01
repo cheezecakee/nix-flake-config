@@ -28,8 +28,8 @@
     efi.canTouchEfiVariables = true;
   };
   boot.blacklistedKernelModules = [ "nouveau" ];
-  boot.lanzaboote.enable = true;
-  boot.lanzaboote.pki.enable = true;
+  # boot.lanzaboote.enable = true;
+  # boot.lanzaboote.pki.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
