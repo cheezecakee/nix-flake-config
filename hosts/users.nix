@@ -7,12 +7,5 @@
     description = "cheezecake";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
-
-    # User-specific environment variables
-    sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      SUDO_EDITOR = "nvim";
-    };
   };
 }
