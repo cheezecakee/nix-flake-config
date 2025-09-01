@@ -11,6 +11,7 @@
       ./services.nix
       ./packages.nix
       ./display.nix
+      ./fonts.nix
       ./zen.nix
     ];
 

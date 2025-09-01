@@ -67,7 +67,4 @@
       local all all trust
     '';
   };
-
-  # Nerdfonts 
-  fonts.fontconfig.enable = true;
 }

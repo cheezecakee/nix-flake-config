@@ -56,7 +56,6 @@
     eww
     jq
     socat
-    nerdfonts.jetbrains-mono
 
     # Tunnel
     cloudflared
