@@ -18,6 +18,7 @@
 
     waybar # Status bar for Hyprland
     rofi
+    libnotify
 
     ## Tools
     tree
@@ -65,5 +66,8 @@
 
     # Zed Broswer
     appimage-run
+
+    # Display
+    hyprshade
   ];
 }
