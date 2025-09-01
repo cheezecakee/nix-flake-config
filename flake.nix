@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
+    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }: {
@@ -11,6 +12,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/default.nix
+        inputs.lanzaboote.nixosModules.default
       ];
     };
   };

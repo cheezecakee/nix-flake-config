@@ -2,10 +2,17 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.notmypc = {
+  users.users.cheeze = {
     isNormalUser = true;
-    description = "NotMyPC";
+    description = "cheezecake";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
+
+    # User-specific environment variables
+    sessionVariables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+      SUDO_EDITOR = "nvim";
+    };
   };
 }

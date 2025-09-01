@@ -9,39 +9,42 @@
     obsidian
 
     ## Terminal
-    ghostty       # Terminal
+    ghostty # Terminal
 
     ## Driver 
-    wl-clipboard  # Clipboard support for Wayland
-    pavucontrol   # Audio control
+    wl-clipboard # Clipboard support for Wayland
+    pavucontrol # Audio control
     udisks2
 
-    waybar        # Status bar for Hyprland
+    waybar # Status bar for Hyprland
     rofi
-    
+
+    ## Tools
+    tree
+    sbctl
+
     ## Programs 
     discord
-    vlc  	  # Video player
-    obs-studio    # Video streaming | recording
+    vlc # Video player
+    obs-studio # Video streaming | recording
 
     ## Dev
-    bun 	  # Package manager
-    git
-    go
-    nodejs
-    gcc 
+    android-studio
+    bun # Package manager
+    cargo
     clang
     cmake
-    zig
+    gcc
+    git
+    go
     lua
-    stylua
-    luaPackages.luacheck
     lua-language-server
+    luaPackages.luacheck
+    nodejs
     python3
+    stylua
     unzip
-
-    # Screen sharing 
-    cudatoolkit
+    zig
 
     # Battery
     power-profiles-daemon

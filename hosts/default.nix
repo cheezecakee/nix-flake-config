@@ -1,31 +1,37 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./users.nix
+      ./editors.nix
       ./desktop.nix
       ./services.nix
       ./packages.nix
+      ./display.nix
+      ./zen.nix
     ];
 
   # Enable nix-command
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.blacklistedKernelModules=["nouveau"];
+  boot.loader = {
+    grub.enable = false;
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+  boot.blacklistedKernelModules = [ "nouveau" ];
+  boot.lanzaboote.enable = true;
+  boot.lanzaboote.pki.enable = true;
 
- # Set your time zone.
+  # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
   # Select internationalisation properties.
@@ -56,5 +62,12 @@
   };
 
   # Enable automatic login for the user.
-  # services.getty.autologinUser = "notmypc";
+  # services.getty.autologinUser = "cheeze";
+
+  # Mount HDD
+  fileSystems."/mnt/work" = {
+    device = "/dev/disk/by-uuid/CA96A59396A58095";
+    fsType = "ntfs-3g";
+    options = [ "defaults" "uid=1000" "gid=100" "umask=022" ];
+  };
 }

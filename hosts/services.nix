@@ -16,9 +16,9 @@
       dynamicBoost.enable = false;
       prime = {
           sync.enable = true;
-          intelBusId = "PCI:0:2:0";
-          nvidiaBusId = "PCI:14:0:0";
-                        # amdgpuBusId = "PCI:54:0:0}"; For AMD GPU
+          nvidiaBusId = "PCI:14:0:0";  
+          intelBusId = "PCI:0:2:0";    #For INTEL GPU
+       #  amdgpuBusId = "PCI:54:0:0}"; #For AMD GPU
       };
   };
   hardware.nvidia-container-toolkit.enable = true;
@@ -48,17 +48,6 @@
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
-  };
-
-  # Sunshine service 
-  services.sunshine = {
-      enable = true;
-      autoStart = true;
-      capSysAdmin = true; # required for Wayland
-      openFirewall = true; # opens needed ports automatically
-      package = pkgs.sunshine.override {
-          cudaSupport = true;
-      };
   };
 
   services.openssh.enable = true;
