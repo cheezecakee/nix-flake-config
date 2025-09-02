@@ -13,6 +13,7 @@
       ./display.nix
       ./fonts.nix
       ./zen.nix
+      ./themes.nix
     ];
 
   # Enable nix-command
