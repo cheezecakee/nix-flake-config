@@ -10,13 +10,12 @@
 
   programs.uwsm.enable = true;
 
-
   # Enable X server 
   services.xserver.enable = true;
+
+  # Display manager configuration (theme config moved to themes.nix)
   services.displayManager = {
-    # startx.enable = true; # Launching the session from the TTY
-    sddm.enable = true;
-    sddm.wayland.enable = true;
+    # SDDM configuration is now handled in themes.nix
     defaultSession = "hyprland-uwsm";
   };
 
@@ -35,3 +34,4 @@
     config.hyprland.default = [ "hyprland" "gtk" ];
   };
 }
+

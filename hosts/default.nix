@@ -5,6 +5,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./secure-boot.nix
       ./users.nix
       ./editors.nix
       ./desktop.nix
@@ -12,8 +13,8 @@
       ./packages.nix
       ./display.nix
       ./fonts.nix
-      ./zen.nix
       ./themes.nix
+      # ./zen.nix
     ];
 
   # Enable nix-command

@@ -23,6 +23,7 @@
     ## Tools
     tree
     sbctl
+    unzip
 
     ## Programs 
     discord
@@ -32,19 +33,24 @@
     ## Dev
     android-studio
     bun # Package manager
+    npm
     cargo
     clang
     cmake
+    docker
+    dotnet-sdk_9
     gcc
     git
     go
     lua
     lua-language-server
     luaPackages.luacheck
+    luarocks
+    mongodb
     nodejs
     python3
     stylua
-    unzip
+    stylua
     zig
 
     # Battery
@@ -66,6 +72,7 @@
 
     # Zed Broswer
     appimage-run
+    firefox
 
     # Display
     hyprshade
