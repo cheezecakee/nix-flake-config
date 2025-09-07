@@ -33,9 +33,5 @@
     config.common.default = "*";
     config.hyprland.default = [ "hyprland" "gtk" ];
   };
-
-  # Sound 
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
 }
 

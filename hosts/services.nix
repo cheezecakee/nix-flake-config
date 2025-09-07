@@ -52,19 +52,20 @@
 
   virtualisation.docker.enable = true;
 
-  # Music 
-  services.mpd = {
-      enable = true;
-      musicDirectory = "/path/to/music";
-      extraConfig = ''
-        audio_output {
-          type "pulse"
-          name "PulseAudio"
-        }
-      '';
 
-      # Optional:
-      network.listenAddress = "any"; # if you want to allow non-localhost connections
-      network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
-  }
+  # Music
+  services.mpd = {
+    enable = true;
+    user = "cheeze";
+    musicDirectory = "/path/to/music";
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "PipeWire Output"
+      }
+    '';
+    environment = {
+      XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.cheeze.uid}";
+    };
+  };
 }
