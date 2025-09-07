@@ -52,7 +52,6 @@
 
   virtualisation.docker.enable = true;
 
-
   # Music
   services.mpd = {
     enable = true;
@@ -64,8 +63,9 @@
         name "PipeWire Output"
       }
     '';
+  };
+  systemd.services.mpd = {
     environment = {
       XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.cheeze.uid}";
-    };
   };
 }
