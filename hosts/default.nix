@@ -5,7 +5,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./secure-boot.nix
+      #./secure-boot.nix
       ./users.nix
       ./editors.nix
       ./desktop.nix

@@ -5,7 +5,7 @@
   users.users.cheeze = {
     isNormalUser = true;
     description = "cheezecake";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [ ];
   };
 }

@@ -16,10 +16,6 @@
     pavucontrol # Audio control
     udisks2
 
-    waybar # Status bar for Hyprland
-    rofi
-    libnotify
-
     ## Tools
     tree
     sbctl
@@ -33,7 +29,6 @@
     ## Dev
     android-studio
     bun # Package manager
-    npm
     cargo
     clang
     cmake
@@ -50,7 +45,6 @@
     nodejs
     python3
     stylua
-    stylua
     zig
 
     # Battery
@@ -63,6 +57,10 @@
     eww
     jq
     socat
+    waybar
+    waybar-mpris
+    rofi
+    libnotify
 
     # Tunnel
     cloudflared
@@ -76,5 +74,8 @@
 
     # Display
     hyprshade
+
+    # Music
+    spotify
   ];
 }
