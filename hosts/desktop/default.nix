@@ -3,7 +3,7 @@
 {
   imports = [
     # Hardware
-    ./hardware-configuration.nix
+    ./hardware-configuration.nix 
     ./filesystems.nix
     ./private.nix
 
